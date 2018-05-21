@@ -9,7 +9,7 @@
 
 print("What word should be guessed?")
 wordGuess = input()
-print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
 wordCheck = wordGuess
 wordGuessSpot = ""
 for i in range(len(wordGuess)):
