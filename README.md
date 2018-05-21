@@ -16,6 +16,7 @@ If user 2 guesses wrong 5 times he looses
 If user 2 guesses the word right he wins
 
 
+# How to get the code
 
 Just click on GuessTheWord or GuessTheWord(Commented) 
 
