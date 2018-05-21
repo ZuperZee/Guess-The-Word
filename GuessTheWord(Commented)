@@ -35,6 +35,6 @@ while wordGuessed != wordCheck != wordGuessSpot and lives > 0:  # While the word
         lives -= 1  # Changes the lives to one less every time 'user' guesses wrong
         print("You have " + str(lives) + " lives left")  # Prints how many lives 'user' has left
 if lives > 0:
-    print("VICTORY!!! The word was \33[34m" + wordCheck)  # Prints this if 'user' has guessed right
+    print("VICTORY!!! The word was " + wordCheck)  # Prints this if 'user' has guessed right
 else:
     print("The word was " + wordCheck)  # Prints this if 'user' has guessed wrong
