@@ -11,6 +11,7 @@ A guess the word game made on Python
 # If user 2 guesses the word right he wins
 
 print("What word should be guessed?")
+
 wordGuess = input()
 print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
 wordCheck = wordGuess
