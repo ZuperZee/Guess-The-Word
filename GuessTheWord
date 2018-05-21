@@ -31,6 +31,6 @@ while wordGuessed != wordCheck != wordGuessSpot and lives > 0:
         lives -= 1
         print("You have " + str(lives) + " lives left")
 if lives > 0:
-    print("VICTORY!!! The word was \33[34m" + wordCheck)
+    print("VICTORY!!! The word was " + wordCheck)
 else:
     print("The word was " + wordCheck)
