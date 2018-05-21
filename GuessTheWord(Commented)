@@ -1,0 +1,40 @@
+# Made by ZuperZee
+
+# Guess the word
+# Guess the word is a game where there is two player.
+# user 1 writes the word user 2 needs to guess.
+# Then user 2 can either guess a letter or the whole word.
+# If user 2 guesses wrong 5 times he looses
+# If user 2 guesses the word right he wins
+
+print("What word should be guessed?")
+wordGuess = input()  # The word that is supposed to be guessed
+# Prints some line to make the 'user' not see the word they need to guess
+print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+wordCheck = wordGuess  # Remember what the wordGuess was
+wordGuessSpot = ""  # Dashes for how many letters there are in the wordGuess
+for i in range(len(wordGuess)):
+    wordGuessSpot += "."  # Creates dashes the same amount as there are letters in wordGuess
+wordGuessed = 0  # Variabel to make the while loop work
+wordGuess = list(wordGuess)  # Turns the 'wordGuess' string to a list
+lives = 5  # How many wrong guesses he can make
+while wordGuessed != wordCheck != wordGuessSpot and lives > 0:  # While the word is not guessed and lives are over 0
+    # Prints the dashes of the wordGuess or the letters if 'user' has guessed any right
+    print(wordGuessSpot + "\nGuess a letter in the word or the word")  # Tells 'user' to guess a letter or the word
+    wordGuessed = input()  # Guessed letter/word
+    if wordCheck.find(wordGuessed) != -1:  # If the letter is in the wordGuess
+        wordGuessSpot = list(wordGuessSpot)  # Turns the 'wordGuessSpot' string to a list
+        for x in range(len(wordCheck)):  # Runs this code after how many letters there are in wordCheck
+            if wordGuessed in wordGuess:  # Checks if the letter is in the wordGuess
+                # Replaces the guessed word with the spot it's supposed to go in wordGuessSpot
+                # And changes the spot in wordGuess with "."
+                wordGuessSpot[wordGuess.index(wordGuessed)] = wordGuessed
+                wordGuess[wordGuess.index(wordGuessed)] = "."
+        wordGuessSpot = "".join(wordGuessSpot)  # Turns the wordGuessSpot to a string
+    else:
+        lives -= 1  # Changes the lives to one less every time 'user' guesses wrong
+        print("You have " + str(lives) + " lives left")  # Prints how many lives 'user' has left
+if lives > 0:
+    print("VICTORY!!! The word was \33[34m" + wordCheck)  # Prints this if 'user' has guessed right
+else:
+    print("The word was " + wordCheck)  # Prints this if 'user' has guessed wrong
